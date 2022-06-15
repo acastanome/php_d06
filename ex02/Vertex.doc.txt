@@ -1,0 +1,32 @@
+
+<- Vertex ----------------------------------------------------------------------
+
+Related to the representation of a point in space: "A Vertex".
+
+The Vertex Class offers a coordinate encapsulation and provides reading and
+writing accessors for it's private attributes.
+
+The Vertex takes 3-5 parameters (all set as private).
+
+Three primary parameters that user must provide:
+    'x', 'y', 'z' as width, height and depth respectively. 
+    If parameters left empty: Undefined behaviour.
+
+Two optional paramerers:
+- 'w' stands for homogeneous coordinate.
+    If 'w' is not provided, default value 1.0 is set.
+- 'color' used to set the vertex color. 
+    This parameter is always an instance of the Color class.
+    Note: If provided something else: Undefined behaviour.
+    If 'color' not set, default value is set to white color (rgb(255,255,255)). 
+
+All attributes are private, but may be accessible with help of attributes write and read.
+
+
+Example of an instance whitout providing the color and the coordinat "w":
+new Vertex( array( 'x' => 1.0, 'y' => 0.0, 'z' => 0.0 ) );
+
+Example of an instance providing the color and the coordinat "w":
+new Vertex(array( 'x' => 1.0, 'y' => 0.0, 'z' => 0.0, 'w' => 2.0), 'color' => $green) );
+
+---------------------------------------------------------------------- Vertex ->
