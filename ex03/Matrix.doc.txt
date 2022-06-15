@@ -1,0 +1,39 @@
+
+<- Matrix ----------------------------------------------------------------------
+
+With matrices, we are able to operate transformations, such as apply a scale
+change, a translation or a rotation to one or several vertices.
+
+In 3D, a 4x4 matrix can be viewed as the representation of an ortho- standardised
+mark, namely 3 vectors for the 3 axes and one vertex to the origin of the mark.
+
+Example, the identity matrix:
+  vtcX vtcY vtcZ vtxO
+x  1.0  0.0  0.0  0.0
+y  0.0  1.0  0.0  0.0
+z  0.0  0.0  1.0  0.0
+w  0.0  0.0  0.0  1.0
+
+The Matrix class will only be able to represent 4x4 matrices, especifically:
+• The identity matrix
+• The translation matrices (”translate”) • The scale change matrices (”scale”)
+• The rotation matrices (”rotate”)
+• the projection matrices (”project”)
+
+Class constants: IDENTITY, SCALE, RX, RY, RZ, TRANSLATION and PROJECTION.
+
+Eight primary parameters that user MUST provide:
+- ’preset’: the matrix type. The value must be one of the Class constants
+    previoulsy defined.
+- ’scale’: the scale factor, mandatory when 'preset' is worth SCALE.
+- ’angle’: the rotation angle in radians, mandatory when 'preset' is worth RX, RY or RZ.
+- ’vtc’: translation vector, mandatory when 'preset' is worth TRANSLATION.
+NOTE : If parameters left empty: Undefined behaviour.
+
+Public methods:
+- Matrix mult( Matrix $rhs ) : returns the multiplication of both matrices.
+
+- Vertex transformVertex( Vertex $vtx ) : returns a new vertex resulting from
+    the transformation of the vertex by the matrix.
+
+---------------------------------------------------------------------- Matrix ->
