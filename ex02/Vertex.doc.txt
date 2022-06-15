@@ -20,13 +20,15 @@ Two optional paramerers:
     Note: If provided something else: Undefined behaviour.
     If 'color' not set, default value is set to white color (rgb(255,255,255)). 
 
-All attributes are private, but may be accessible with help of attributes write and read.
+All attributes are private, but may be accessible with help of attributes write
+    and read.
 
 
 Example of an instance whitout providing the color and the coordinat "w":
 new Vertex( array( 'x' => 1.0, 'y' => 0.0, 'z' => 0.0 ) );
 
 Example of an instance providing the color and the coordinat "w":
-new Vertex(array( 'x' => 1.0, 'y' => 0.0, 'z' => 0.0, 'w' => 2.0), 'color' => $green) );
+new Vertex(array( 'x' => 1.0, 'y' => 0.0, 'z' => 0.0, 'w' => 2.0),
+    'color' => $green) );
 
 ---------------------------------------------------------------------- Vertex ->
